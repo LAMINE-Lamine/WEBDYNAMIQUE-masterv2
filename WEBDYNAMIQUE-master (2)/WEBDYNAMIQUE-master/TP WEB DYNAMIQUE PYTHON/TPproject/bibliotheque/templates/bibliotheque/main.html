@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bibliotheque/style.css' %}">
+
+</head>
+<body>
+     <nav class="oriantationpage">
+         <div class="Lesclassesdarmes">Les classes d'armes</div>
+         <ul class="onglet" id="list">
+            <li class="list"><a href="/bibliotheque/">home</a></li>
+            <li class="list"> <a href="/bibliotheque/ajout/">classe d'arme</a></li>
+            <li class="list"><a href="/bibliotheque/ajout2/">arme</a></li>
+
+            </ul>
+
+         <div class="home" id="classe_darme" ></div>
+          </nav>
+
+
+      {% block content %}
+
+      {% endblock %}
+
+</body>
+</html>

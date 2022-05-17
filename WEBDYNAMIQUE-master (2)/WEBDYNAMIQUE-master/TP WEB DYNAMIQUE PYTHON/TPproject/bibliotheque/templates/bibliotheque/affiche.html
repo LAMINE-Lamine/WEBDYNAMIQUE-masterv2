@@ -1,0 +1,30 @@
+{% extends "bibliotheque/main.html" %}
+{% block title %}
+ARME
+{% endblock %}
+{% block content %}
+
+ <a href="/bibliotheque/ajout3/{{classe.id}}/"><h1 class="nouvelle_arme">nouvelle arme disponible de la classe : {{classe}}</h1></a>
+
+<p>Voici ici les details de la classe suivant {{classe}}  :</p>
+ <li> {{a}}  </li>
+{% for a in liste2 %}
+<article class="info_arme">
+
+
+      <li>-L'arme a pour nom la ' {{a.nom_d_arme}} '.  </li> <br>
+      <li>-Le createur de cette arme est  '{{a.createur}} ' . </li><br>
+      <li>-Elle a été cree le  {{a.date_creation}} . </li><br>
+      <li>-Elle existe sous le nombre de'{{a.nombre_d_exemplaire}}' exemplaire. </li><br>
+       <li>-Et elle a une porté  de {{a.nombre_d_exemplaire}}m. </li><br>
+        <li><img src="{{a.image}}" height=150px >
+
+
+
+ <li>  <button name="supp"><a href="/delete2/{{a.id}}"> effacer  </a></button>
+                <button name="upd"><a href="/update2/{{a.id}}"> update </a></button></li>
+    </article>
+
+{%endfor%}
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "bibliotheque/main.html" %}
+{% block title %}
+ARME
+{% endblock %}
+{% block content %}
+    <form action="/bibliotheque/traitement/" method="POST">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Send Data"/>
+    </form>
+{% endblock %}
